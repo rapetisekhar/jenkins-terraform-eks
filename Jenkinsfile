@@ -20,39 +20,39 @@ pipeline {
                 }
             }
         }
-        // stage ("Fetch Code") {
-        //     steps {
-        //         script {
-        //             gv.fetchCode()
-        //         }
-        //     }
-        // }
-        // stage ('Build') {
-        //     steps {
-        //         script {
-        //             gv.buildCode()
-        //         }
-        //     }
-        //     post {
-        //         success {
-        //             archiveArtifacts artifacts: '**/*.war'
-        //         }
-        //     }
-        // }
-        // stage ('Build Image') {
-        //     steps {
-        //         script {
-        //             gv.buildImage()
-        //         }
-        //     }
-        // }
-        // stage ('Push Image to ECR') {
-        //     steps {
-        //         script {
-        //             gv.pushImage()
-        //         }
-        //     }
-        // }
+        stage ("Fetch Code") {
+            steps {
+                script {
+                    gv.fetchCode()
+                }
+            }
+        }
+        stage ('Build') {
+            steps {
+                script {
+                    gv.buildCode()
+                }
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '**/*.war'
+                }
+            }
+        }
+        stage ('Build Image') {
+            steps {
+                script {
+                    gv.buildImage()
+                }
+            }
+        }
+        stage ('Push Image to ECR') {
+            steps {
+                script {
+                    gv.pushImage()
+                }
+            }
+        }
         stage ('provision eks cluster') {
             steps {
                 script {
@@ -60,12 +60,12 @@ pipeline {
                 }
             }
         }
-        // stage ('connect to eks cluster') {
-        //     steps {
-        //         script {
-        //             gv.connectEks()
-        //         }
-        //     }
-        // }
+        stage ('connect to eks cluster') {
+            steps {
+                script {
+                    gv.connectEks()
+                }
+            }
+        }
     }
 }
