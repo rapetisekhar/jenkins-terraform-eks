@@ -19,7 +19,7 @@ pipeline {
                     gv = load "script.groovy"
                 }
             }
-        // }
+        }
         // stage ("Fetch Code") {
         //     steps {
         //         script {
