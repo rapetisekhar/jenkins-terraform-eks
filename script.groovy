@@ -27,7 +27,7 @@ def provisionEksCluster() {
             sh 'terraform init -reconfigure'
             sh 'terraform destroy --auto-approve'
             EKS_CLUSTER_NAME = sh(
-                script: "terraform output cluster_name",
+                script: "terraform output clusterName",
                 returnStdout: true
             ).trim()
         }
