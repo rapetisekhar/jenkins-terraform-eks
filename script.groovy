@@ -25,7 +25,7 @@ def provisionEksCluster() {
     withAWS(credentials: 'JenkinsAWSCLI', region: 'us-east-2') {
         dir('terraform') {
             sh 'terraform init -reconfigure'
-            sh 'terraform apply --auto-approve'
+            sh 'terraform destroy --auto-approve'
             EKS_CLUSTER_NAME = sh(
                 script: "terraform output cluster_name",
                 returnStdout: true
