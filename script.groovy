@@ -25,7 +25,7 @@ def provisionEksCluster() {
     withAWS(credentials: 'JenkinsAWSCLI', region: 'us-east-2') {
         dir('terraform') {
             sh 'terraform init -reconfigure'
-            sh 'terraform apply --auto-approve'
+            sh 'terraform destroy --auto-approve'
             EKS_CLUSTER_NAME = sh(
                 script: "terraform output clusterName",
                 returnStdout: true
@@ -40,6 +40,8 @@ def connectEks() {
         sh "aws eks update-kubeconfig --name ${EKS_CLUSTER_NAME} --region ${awsRegion}"
         sh 'kubectl get nodes'
         sh 'kubectl apply -f app.yaml'
+        sh 'sudo cp /var/lib/jenkins/.kube/config ~/.kube/.'
+        sh 'sudo chown -R ubuntu:ubuntu config'
     }
 }
 
