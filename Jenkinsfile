@@ -13,12 +13,12 @@ pipeline {
         jdk "OracleJDK8"
     }
     stages {
-        // stage ("init") {
-        //     steps {
-        //         script {
-        //             gv = load "script.groovy"
-        //         }
-        //     }
+        stage ("init") {
+            steps {
+                script {
+                    gv = load "script.groovy"
+                }
+            }
         // }
         // stage ("Fetch Code") {
         //     steps {
