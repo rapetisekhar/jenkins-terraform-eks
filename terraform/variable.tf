@@ -8,7 +8,6 @@ variable "instance_types" {
   type = list(any)
 }
 variable "vpc_cidr_block" {}
-variable "instance_type" {}
 variable "vpc_name" {}
 variable "environment" {}
 variable "eks-clusterName" {}
