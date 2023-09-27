@@ -63,8 +63,10 @@ First we will install suggested plugins and later we will install tyhe needed pl
 Lets go!!!!!
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/e45b8c02-c35b-468c-a188-3338870a05ef)
 Then give the details required, save and continue.
+
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/d0c5de7d-e3e5-40f6-a941-4a66e1a71042)
 *  Go to Dashboard — Manage Jenkins — Plugins
+*  
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/154b4088-4833-475e-9a55-119a1a674ff7)
 * Here under Available plugins search for these plugins below and install it without restarting.
 
