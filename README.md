@@ -71,7 +71,14 @@ Then give the details required, save and continue.
 *  Go to Dashboard — Manage Jenkins — Plugins
 *  
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/154b4088-4833-475e-9a55-119a1a674ff7)
+
 * Here under Available plugins search for these plugins below and install it without restarting.
+* CloudBees AWS Credentials
+* Amazon ECR
+* Docker Pipeline
+* Maven integration
+* AWS Credentials
+* pipeline aws steps
 
 
 
