@@ -12,10 +12,7 @@ GitOps or equivalent
 EKS
 
 # Requirements Overview
-Developers check-in code to Git repo
-Upon Git check-in Jenkins build starts
-Jenkins build pushed docker image to ECR
-Jenkins deploy application image to EKS
-User should be able to test deployed application with browser
+Developers check-in code to Git repo, Upon Git check-in Jenkins build starts Jenkins build pushed docker image to ECR. 
+Jenkins then deploys application image to EKS. User should be able to test deployed application with browser
 
 # Steps 
