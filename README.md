@@ -54,10 +54,10 @@ Execute the Terraform script:
 `terraform init`
 `terraform apply`
 
-Step 4: Post-Deployment
+## Step 6: Post-Deployment & Installing the right plugins for our project
 Access the Jenkins web interface using the public ipv4 address. configure Jenkins.
 
-# Installing the right plugins for our project
+# 
 
 
 
