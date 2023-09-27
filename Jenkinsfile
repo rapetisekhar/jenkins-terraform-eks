@@ -3,9 +3,9 @@ def gv
 pipeline {
     agent any
     environment {
-        awsEcrCreds = 'ecr:us-east-2:JenkinsAWSCLI'
-        awsEcrRegistry = "171040096730.dkr.ecr.us-east-2.amazonaws.com/devops"
-        imageRegUrl = "https://171040096730.dkr.ecr.us-east-2.amazonaws.com"
+        awsEcrCreds = 'ecr:us-east-2:**********'
+        awsEcrRegistry = "*******.dkr.ecr.us-east-2.amazonaws.com/*******"
+        imageRegUrl = "https://**********.dkr.ecr.us-east-2.amazonaws.com"
         awsRegion = "us-east-2"
     }
     tools {
