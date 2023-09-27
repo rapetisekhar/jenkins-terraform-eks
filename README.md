@@ -33,7 +33,7 @@ We will configure AWS credentials or profiles that Terraform will use to create 
 # Step 2: Configure AWS CLI
 
 Open a terminal and run the following command to configure AWS CLI:
-`àws configure`
+`aws configure`
 
 You will be prompted to enter:
 * AWS Access Key ID: Enter your access key ID.
@@ -51,8 +51,8 @@ Modify the script as needed for your project, including instance type(as we know
 
 ## Step 5: Execution
 Execute the Terraform script:
-* {terraform init
-* terraform apply}
+`terraform init`
+`terraform apply`
 
 Step 4: Post-Deployment
 Access the Jenkins web interface using the public ipv4 address. configure Jenkins.
