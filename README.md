@@ -2,7 +2,7 @@
 
 
 # Project
-A simple Jenkins CI/CD application deployment pipeline to Kubernetes on the AWS infrastructure.
+A simple Jenkins CI/CD application deployment pipeline to Kubernetes on the AWS infrastructure. Automated with Terraform 
 
 # Requirements
 AWS Infrastructure
