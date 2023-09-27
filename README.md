@@ -26,12 +26,12 @@ We have a Terraform script in a repository that automates Jenkins server setup. 
 
 ## Step 2: Customize
 
-Modify the script as needed for your project, including instance type, region, and specific Jenkins configurations.
-Step 3: Execution
+Modify the script as needed for your project, including instance type(as we know is better to use a suitable instance type for jenkins, i recommend using atleast for this project a t2.medium), region, and specific Jenkins configurations.
 
+## Step 3: Execution
 Execute the Terraform script:
-terraform init
-terraform apply
+* {terraform init
+* terraform apply}
 
 Step 4: Post-Deployment
 Access the Jenkins web interface using the public ipv4 address. configure Jenkins.
