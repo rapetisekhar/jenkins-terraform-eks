@@ -22,7 +22,7 @@ In this guide, we'll set up a Jenkins server on AWS using Terraform, a tool for 
 
 We will configure AWS credentials or profiles that Terraform will use to create resources in AWS is a crucial step in the process. Here's how to do it:
 
-# Step 1: Set Up AWS Credentials
+## Step 1: Set Up AWS Credentials
 
 * AWS CLI Installation: If you haven't already, install the AWS Command Line Interface (CLI) on your local machine.
 
@@ -30,7 +30,7 @@ We will configure AWS credentials or profiles that Terraform will use to create 
 
 * AWS Access Key and Secret Key: Obtain your AWS access key ID and secret access key. These are the credentials Terraform will use to authenticate with AWS.
 
-# Step 2: Configure AWS CLI
+## Step 2: Configure AWS CLI
 
 Open a terminal and run the following command to configure AWS CLI:
 `aws configure`
