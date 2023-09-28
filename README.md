@@ -84,6 +84,8 @@ Here under Available plugins search for these plugins below and install it witho
 * AWS Credentials
 * pipeline aws steps
 
+## Step : configure maven and java(jdk) path in jenkins.
+
 ## Step 7: Configuring Jenkins Credentials
 Now, let's create AWS credentials in Jenkins:
 
