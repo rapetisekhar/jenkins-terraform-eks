@@ -156,7 +156,7 @@ Additionally, incorporating this SSH key pair into Jenkins enables secure authen
 
 To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can use either the AWS Management Console or the AWS Command Line Interface (CLI). Below, I'll provide instructions for both methods:
 
-Method 1: Using the AWS Management Console
+** Method 1: Using the AWS Management Console **
 *Log in to your AWS account if you haven't already.
 
 * From the AWS Management Console, go to the "Services" dropdown in the top left corner, and under the "Compute" section, select "ECR" (Elastic Container Registry).
