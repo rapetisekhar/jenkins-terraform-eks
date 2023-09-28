@@ -170,7 +170,7 @@ To set up a webhook in GitHub to trigger Jenkins builds automatically, follow th
 * Click "Add webhook" to save your webhook configuration.
 
 ## Step 9: Create an ECR on AWS
-
+We will create an ECR repo where our built docker images will be pushed to.
 To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can use the AWS Management Console:
 
 **Using the AWS Management Console**
