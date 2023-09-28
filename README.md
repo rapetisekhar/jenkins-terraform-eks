@@ -70,7 +70,8 @@ Then give the details required, save and continue.
 
 *  Go to Dashboard — Manage Jenkins — Plugins The simplest and most common way of installing plugins is through the Manage Jenkins > Plugins view, available to administrators of a Jenkins environment.
   
-![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/154b4088-4833-475e-9a55-119a1a674ff7)
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/676e3688-e60a-4861-b364-7a67cd0bf6c4)
+
 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/8035e77e-53a9-48f3-899f-f842d6477173)
 
