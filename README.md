@@ -232,8 +232,7 @@ Calls the buildImage method, which builds a Docker image from the application co
 Pushes the Docker image to Amazon Elastic Container Registry (ECR) using the pushImage method.
 
 ## Provision EKS Cluster Stage:
-Calls the provisionEksCluster method, suggesting the provisioning of an Amazon Elastic Kubernetes Service (EKS) cluster.
+Invokes the provisionEksCluster method, which goes beyond just creating an Amazon Elastic Kubernetes Service (EKS) cluster. It also sets up a Virtual Private Cloud (VPC) with essential components like subnets, an internet gateway, NAT gateway, route table, and more. This entire infrastructure is provisioned using a Terraform module. For a deeper understanding of the context, you can refer to the script.groovy and the terraform folder. 😊
 
 ## Connect to EKS Cluster Stage:
-Calls the connectEks method, indicating the establishment of a connection to the provisioned EKS cluster.
-It's important to note that the actual implementation of the fetchCode, buildCode, buildImage, pushImage, provisionEksCluster, and connectEks methods is not provided in the Jenkinsfile but is likely defined in the "script.groovy" script. These methods would contain the specific commands and steps for each stage of your CI/CD process.
+Calls the connectEks method, indicating the establishment of a connection to the provisioned EKS cluster. And deploying this pushed image in our EKS cluster
