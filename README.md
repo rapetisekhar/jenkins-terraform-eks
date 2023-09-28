@@ -188,14 +188,14 @@ Configure Jenkins Job
 In the Jenkins dashboard, create a new pipeline job:
 
 * Click "New Item" 
-* ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/a485ed22-4e2d-48a2-8058-9182a4834f05)
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/a485ed22-4e2d-48a2-8058-9182a4834f05)
 
 * Enter a job name > Select "Pipeline" as the job type > Click "OK."
-* ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/e3178e00-733f-466a-82ca-689a76cdf140)
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/e3178e00-733f-466a-82ca-689a76cdf140)
 
 * In the job configuration, go to the "Pipeline" section.
 
-* Choose the pipeline script option:
+* Choose the pipeline script option: As you know our Jenkinsfile is in the repository, so select "Pipeline script from SCM" and configure the repository URL, credentials, and Jenkinsfile path. If your Jenkinsfile is defined in the job configuration, select "Pipeline script."
 * ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/bbd685ea-669c-42bd-ac4f-d086e63f8969)
 
-* As you know our Jenkinsfile is in the repository, so select "Pipeline script from SCM" and configure the repository URL, credentials, and Jenkinsfile path. If your Jenkinsfile is defined in the job configuration, select "Pipeline script."
+
