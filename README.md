@@ -1,4 +1,4 @@
-<img width="1064" alt="DevOps" src="https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/960fade6-bac1-4e5e-8bad-776598701de6">
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/3f52921a-da83-46fd-8f6e-628de6695421)
 
 
 # Project
