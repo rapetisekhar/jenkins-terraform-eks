@@ -4,15 +4,15 @@
 # Project
 A simple Jenkins CI/CD application deployment pipeline to Kubernetes on the AWS infrastructure. Automated with Terraform 
 
+# Overview
+Developers commit code to a Git repository, triggering Jenkins to initiate a build process. Jenkins compiles the Java code into an executable WAR file. This WAR file is then packaged with Tomcat into a Docker image and subsequently pushed to Amazon Elastic Container Registry (ECR). Following this, Jenkins employs Terraform to provision an Amazon Elastic Kubernetes Service (EKS) cluster, deploying the Docker image into the cluster. Once deployed, users can conveniently test the application using a web browser.
+
 # Requirements
 AWS Infrastructure
 VPC following AWS best practice with public and private subnets
 Jenkins (Terraform)
 GitOps or equivalent
 EKS (Jenkins uses terraform)
-
-# Requirements Overview
-Developers commit code to a Git repository, triggering Jenkins to initiate a build process. Jenkins compiles the Java code into an executable WAR file. This WAR file is then packaged with Tomcat into a Docker image and subsequently pushed to Amazon Elastic Container Registry (ECR). Following this, Jenkins employs Terraform to provision an Amazon Elastic Kubernetes Service (EKS) cluster, deploying the Docker image into the cluster. Once deployed, users can conveniently test the application using a web browser.
 
 # Steps 
 Setting Up Jenkins on AWS Using Terraform
