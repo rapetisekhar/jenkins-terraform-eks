@@ -99,7 +99,7 @@ You can use this command below in your server where the jenkins is installed to 
 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/7d3f3a32-2277-4a3e-b942-bfabdc7bb6cb)
 
-
+Now Scroll down and look for the Maven section and click on add maven, but this time after providing it a name, check the box `**install  automatically**`
 
 
 Save the configuration.
