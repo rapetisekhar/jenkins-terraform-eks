@@ -152,11 +152,28 @@ Additionally, incorporating this SSH key pair into Jenkins enables secure authen
 
 * Click "OK" to save the credentials.
 
-# Step 8: Create an ECR on AWS and a new pipeline in Jenkins to run our jobs.
+## Step 8: Configure GitHub Webhook
+Additionally, we'll set up a webhook trigger between our Jenkins job and GitHub. This webhook will automatically initiate our Jenkins jobs in response to specific push events or code changes in our repository.
+To set up a webhook in GitHub to trigger Jenkins builds automatically, follow these steps:
+* In your GitHub repository, go to "Settings" > "Webhooks."
 
-To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can use either the AWS Management Console or the AWS Command Line Interface (CLI). Below, I'll provide instructions for both methods:
+* Click "Add webhook."
 
-** Method 1: Using the AWS Management Console **
+* In the "Payload URL" field, enter the URL to your Jenkins server, followed by /github-webhook/ (e.g., http://your-jenkins-server/github-webhook/).
+
+* Set the "Content type" to "application/json."
+
+* In the "Secret" field, you can optionally enter a secret token that Jenkins will use to verify the authenticity of the webhook payload. This enhances security.
+
+* Select the events that should trigger the webhook. At a minimum, you'll want to select "Just the push event" to trigger the build when code is pushed to the repository.
+
+* Click "Add webhook" to save your webhook configuration.
+
+## Step 9: Create an ECR on AWS
+
+To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can use the AWS Management Console:
+
+**Using the AWS Management Console**
 *Log in to your AWS account if you haven't already.
 
 * From the AWS Management Console, go to the "Services" dropdown in the top left corner, and under the "Compute" section, select "ECR" (Elastic Container Registry).
@@ -165,5 +182,20 @@ To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can 
 
 * Enter a unique name for your repository in the "Repository name" field. Optionally, add a tag immutability policy if desired. Click "Create repository" to create the ECR repository.
 
+## Step 10: Configure Jenkins to run our jobs.
+Configure Jenkins Job
 
+In the Jenkins dashboard, create a new pipeline job:
 
+* Click "New Item" 
+* ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/a485ed22-4e2d-48a2-8058-9182a4834f05)
+
+* Enter a job name > Select "Pipeline" as the job type > Click "OK."
+* ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/e3178e00-733f-466a-82ca-689a76cdf140)
+
+* In the job configuration, go to the "Pipeline" section.
+
+* Choose the pipeline script option:
+* ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/bbd685ea-669c-42bd-ac4f-d086e63f8969)
+
+* As you know our Jenkinsfile is in the repository, so select "Pipeline script from SCM" and configure the repository URL, credentials, and Jenkinsfile path. If your Jenkinsfile is defined in the job configuration, select "Pipeline script."
