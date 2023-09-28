@@ -74,6 +74,7 @@ Then give the details required, save and continue.
 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/8035e77e-53a9-48f3-899f-f842d6477173)
 
+
 Here under Available plugins search for these plugins below and install it without restarting.
 * CloudBees AWS Credentials
 * Amazon ECR
@@ -82,11 +83,75 @@ Here under Available plugins search for these plugins below and install it witho
 * AWS Credentials
 * pipeline aws steps
 
+## Step 7: Configuring Jenkins Credentials
+Now, let's create AWS credentials in Jenkins:
 
+* In the Jenkins dashboard, go to `"Manage Jenkins" > "Manage Credentials."`
+
+* Under the "Stores scoped to Jenkins" section, click "Jenkins."
+
+* Click "Global credentials (unrestricted)" and then "Add Credentials."
+
+* Choose "AWS Credentials" as the kind of credential.
+
+* In the "ID" field, provide a unique identifier for these credentials (e.g., "AWS_Credentials").
+
+* Enter your AWS Access Key ID and Secret Access Key in the respective fields.
+
+* Optionally, you can provide a description for these credentials.
+
+* Click "OK" to save the credentials.
+
+
+In our next steps, we'll establish a secure and automated connection between GitHub and Jenkins by generating a new SSH key pair. Adding your public SSH key to GitHub ensures secure authentication, authorizes Jenkins to access your repositories, and establishes trusted communication for secure interaction with your GitHub projects.
+
+Additionally, incorporating this SSH key pair into Jenkins enables secure authentication with GitHub during interactions with repositories, facilitating a seamless and secure automation and integration process between Jenkins and GitHub. In summary, both GitHub and Jenkins rely on this SSH key pair for authentication and mutual trust, enabling a secure and automated collaboration between the two platforms.
+
+* Generate an SSH Key Pair
+
+** If you haven't already, generate an SSH key pair on your Jenkins server. You can use the ssh-keygen command for this purpose. Run the following command:
+
+** `ssh-keygen -t rsa -b 4096 -C "your-email@example.com"`
+
+** Replace "your-email@example.com" with your GitHub email address, and follow the prompts to generate the key pair.
+
+** Add the SSH Public Key to GitHub
+
+** Copy the contents of the public key file (~/.ssh/id_rsa.pub) you just generated.
+
+** Log in to your GitHub account.
+
+** Go to your GitHub account settings by clicking on your profile picture in the upper-right corner, then selecting "Settings."
+
+** In the left sidebar, click on "SSH and GPG keys."
+
+** Click "New SSH key" or "Add SSH key."
+
+** Provide a title (e.g., "Jenkins Server") and paste the SSH public key into the "Key" field.
+
+** Click "Add SSH key" to save.
+
+** Configure Jenkins to Use the SSH Key
+
+** Log in to your Jenkins dashboard.
+
+** In the Jenkins dashboard, click on "Manage Jenkins" > "Manage Credentials."
+
+** Under the "Stores scoped to Jenkins" section, click "Jenkins."
+
+** Click "Global credentials (unrestricted)" and then "Add Credentials."
+
+** Choose "SSH Username with private key" as the kind of credential.
+
+** In the "Username" field, enter your GitHub username.
+
+** In the "Private Key" field, select "Enter directly" and paste the contents of the private key (~/.ssh/id_rsa) you generated earlier.
+
+** Provide a description (e.g., "GitHub SSH Key for Jenkins").
+
+** Click "OK" to save the credentials.
 
 # 
 
 
 
-
-and set up jobs and pipelines as required.
