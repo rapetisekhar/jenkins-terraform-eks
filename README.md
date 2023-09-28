@@ -197,7 +197,8 @@ In the Jenkins dashboard, create a new pipeline job:
 
 * In the "Build Triggers" option check the box `GitHub hook trigger for GitScm polling`
   
-![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/31c0d333-a4cf-4aa2-b5ea-cfd4b3f5a3b9)
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/df8c25d4-8760-478c-94fc-4dd41db08e1d)
+
 
 
 * In the job configuration, go to the "Pipeline" section. Choose for the 'Pipeline script from SCM' option since our Jenkinsfile resides within the repository. Provide the repository URL and select the previously created GitHub access credentials in the credentials option. Choose the appropriate branch (e.g., 'main' or 'master') depending on your repo and scm configuration. Specify the Jenkinsfile path; in my case, it's in the root directory, so I'll simply use the filename 'Jenkinsfile'.
