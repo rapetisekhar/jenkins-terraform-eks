@@ -85,6 +85,24 @@ Here under Available plugins search for these plugins below and install it witho
 * pipeline aws steps
 
 ## Step : configure maven and java(jdk) path in jenkins.
+How to integrate Maven with Jenkins? 
+Understand that we have to build our java application into an executabale Jar file  and then build this jar file into a docker iomage that will be deployed in our EKS clusetr
+The reason behind integrating Maven with Jenkins is so that we can execute Maven commands through Jenkins as we will majorly use Maven for Java projects. Hence, JDK also comes as a pre-requisite for this setup. So, let's first quickly see how to can specify the java path in Jenkins:
+* In the Jenkins dashboard, go to "Manage Jenkins" > "Global Tool Configuration."
+  
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/b67b6f57-dae4-48ec-94cc-d93e5205541b)
+
+Under the "JDK" section, click "Add JDK."
+Provide a name (e.g., "JDK 8") and specify the JAVA_HOME path (e.g., /usr/lib/jvm/java-8-openjdk-amd64 for OpenJDK 8).
+You can use this command below in your server where the jenkins is installed to check the path where your java was installed.
+`readlink -f $(which java)`
+
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/7d3f3a32-2277-4a3e-b942-bfabdc7bb6cb)
+
+
+
+
+Save the configuration.
 
 ## Step 7: Configuring Jenkins Credentials
 Now, let's create AWS credentials in Jenkins:
