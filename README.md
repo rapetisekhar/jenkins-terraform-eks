@@ -1,4 +1,4 @@
-<img src="https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/3f52921a-da83-46fd-8f6e-628de6695421" width="48">
+<img src="https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/3f52921a-da83-46fd-8f6e-628de6695421" width="480">
 
 
 # Project
