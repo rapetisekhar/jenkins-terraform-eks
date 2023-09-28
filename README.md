@@ -211,3 +211,29 @@ After completing these steps, click 'Save and Apply' and then initiate a build t
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/6052c998-d7da-4ff9-a84e-947adc43fdaf)
 
 # Overview or Description of the Jenkinsfile 
+So first of all, As you could see from my codes, i am integrating the Jenkinsfile with my scipt.groovy. Using a Jenkinsfile in conjunction with a Groovy script enables a cleaner and more modular CI/CD configuration. The Jenkinsfile defines the pipeline structure, while the Groovy script handles the detailed implementation of each stage's tasks. This separation enhances code organization, promotes reusability, and simplifies maintenance, making it a more efficient and readable way to manage complex CI/CD processes.
+
+## My Jenkinsfile defines a declarative pipeline with multiple stages for a continuous integration and deployment (CI/CD) process. Here's a breakdown of what each stage is doing:
+
+## Init Stage:
+Loads a Groovy script named "script.groovy" and assigns it to the variable gv.
+
+## Fetch Code Stage:
+Calls the fetchCode method from the loaded Groovy script (gv) to fetch the source code.
+
+## Build Stage:
+Builds the code, using Maven (specified in the "tools" section).
+Archives the generated artifacts (War files) upon a successful build.
+
+## Build Image Stage:
+Calls the buildImage method, which builds a Docker image from the application code.
+
+## Push Image to ECR Stage:
+Pushes the Docker image to Amazon Elastic Container Registry (ECR) using the pushImage method.
+
+## Provision EKS Cluster Stage:
+Calls the provisionEksCluster method, suggesting the provisioning of an Amazon Elastic Kubernetes Service (EKS) cluster.
+
+## Connect to EKS Cluster Stage:
+Calls the connectEks method, indicating the establishment of a connection to the provisioned EKS cluster.
+It's important to note that the actual implementation of the fetchCode, buildCode, buildImage, pushImage, provisionEksCluster, and connectEks methods is not provided in the Jenkinsfile but is likely defined in the "script.groovy" script. These methods would contain the specific commands and steps for each stage of your CI/CD process.
