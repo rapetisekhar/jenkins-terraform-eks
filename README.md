@@ -92,16 +92,17 @@ The reason behind integrating Maven with Jenkins is so that we can execute Maven
   
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/b67b6f57-dae4-48ec-94cc-d93e5205541b)
 
-Under the "JDK" section, click "Add JDK."
-Provide a name (e.g., "JDK 8") and specify the JAVA_HOME path (e.g., /usr/lib/jvm/java-8-openjdk-amd64 for OpenJDK 8).
-You can use this command below in your server where the jenkins is installed to check the path where your java was installed.
-`readlink -f $(which java)`
+* Under the "JDK" section, click "Add JDK."
+* Provide a name (e.g., "JDK 8") and specify the JAVA_HOME path (e.g., /usr/lib/jvm/java-8-openjdk-amd64 for OpenJDK 8).
+* You can use this command below in your server where the jenkins is installed to check the path where your java was installed.
+* `readlink -f $(which java)`
 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/7d3f3a32-2277-4a3e-b942-bfabdc7bb6cb)
 
 
-## Now Scroll down and look for the Maven section and click on add maven, but this time after providing it a name, check the box **`install  automatically`**
+* Now Important!! Scroll down and look for the Maven section and click on add maven, but in our case, this time after providing it a name, check the box **`install  automatically`**
 
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/aef3d9a9-29a9-4e9a-a491-e4ddbf32736f)
 
 Save the configuration.
 
