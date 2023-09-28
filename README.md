@@ -206,3 +206,8 @@ In the Jenkins dashboard, create a new pipeline job:
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/bbd685ea-669c-42bd-ac4f-d086e63f8969)
 
 
+After completing these steps, click 'Save and Apply' and then initiate a build to test our job. Moreover, keep in mind that the job can also be triggered automatically when a push event occurs in our repository; it will start promptly in response to the event.
+
+![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/6052c998-d7da-4ff9-a84e-947adc43fdaf)
+
+# Overview or Description of the Jenkinsfile 
