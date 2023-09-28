@@ -107,49 +107,49 @@ In our next steps, we'll establish a secure and automated connection between Git
 
 Additionally, incorporating this SSH key pair into Jenkins enables secure authentication with GitHub during interactions with repositories, facilitating a seamless and secure automation and integration process between Jenkins and GitHub. In summary, both GitHub and Jenkins rely on this SSH key pair for authentication and mutual trust, enabling a secure and automated collaboration between the two platforms.
 
-* Generate an SSH Key Pair
+Generate an SSH Key Pair
 
-** If you haven't already, generate an SSH key pair on your Jenkins server. You can use the ssh-keygen command for this purpose. Run the following command:
+* If you haven't already, generate an SSH key pair on your Jenkins server. You can use the ssh-keygen command for this purpose. Run the following command:
 
-** `ssh-keygen -t rsa -b 4096 -C "your-email@example.com"`
+* `ssh-keygen -t rsa -b 4096 -C "your-email@example.com"`
 
-** Replace "your-email@example.com" with your GitHub email address, and follow the prompts to generate the key pair.
+* Replace "your-email@example.com" with your GitHub email address, and follow the prompts to generate the key pair.
 
-** Add the SSH Public Key to GitHub
+* Add the SSH Public Key to GitHub
 
-** Copy the contents of the public key file (~/.ssh/id_rsa.pub) you just generated.
+* Copy the contents of the public key file (~/.ssh/id_rsa.pub) you just generated.
 
-** Log in to your GitHub account.
+* Log in to your GitHub account.
 
-** Go to your GitHub account settings by clicking on your profile picture in the upper-right corner, then selecting "Settings."
+* Go to your GitHub account settings by clicking on your profile picture in the upper-right corner, then selecting "Settings."
 
-** In the left sidebar, click on "SSH and GPG keys."
+* In the left sidebar, click on "SSH and GPG keys."
 
-** Click "New SSH key" or "Add SSH key."
+* Click "New SSH key" or "Add SSH key."
 
-** Provide a title (e.g., "Jenkins Server") and paste the SSH public key into the "Key" field.
+* Provide a title (e.g., "Jenkins Server") and paste the SSH public key into the "Key" field.
 
-** Click "Add SSH key" to save.
+* Click "Add SSH key" to save.
 
-** Configure Jenkins to Use the SSH Key
+* Configure Jenkins to Use the SSH Key
 
-** Log in to your Jenkins dashboard.
+* Log in to your Jenkins dashboard.
 
-** In the Jenkins dashboard, click on "Manage Jenkins" > "Manage Credentials."
+* In the Jenkins dashboard, click on "Manage Jenkins" > "Manage Credentials."
 
-** Under the "Stores scoped to Jenkins" section, click "Jenkins."
+* Under the "Stores scoped to Jenkins" section, click "Jenkins."
 
-** Click "Global credentials (unrestricted)" and then "Add Credentials."
+* Click "Global credentials (unrestricted)" and then "Add Credentials."
 
-** Choose "SSH Username with private key" as the kind of credential.
+* Choose "SSH Username with private key" as the kind of credential.
 
-** In the "Username" field, enter your GitHub username.
+* In the "Username" field, enter your GitHub username.
 
-** In the "Private Key" field, select "Enter directly" and paste the contents of the private key (~/.ssh/id_rsa) you generated earlier.
+* In the "Private Key" field, select "Enter directly" and paste the contents of the private key (~/.ssh/id_rsa) you generated earlier.
 
-** Provide a description (e.g., "GitHub SSH Key for Jenkins").
+* Provide a description (e.g., "GitHub SSH Key for Jenkins").
 
-** Click "OK" to save the credentials.
+* Click "OK" to save the credentials.
 
 # 
 
