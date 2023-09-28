@@ -107,7 +107,7 @@ In our next steps, we'll establish a secure and automated connection between Git
 
 Additionally, incorporating this SSH key pair into Jenkins enables secure authentication with GitHub during interactions with repositories, facilitating a seamless and secure automation and integration process between Jenkins and GitHub. In summary, both GitHub and Jenkins rely on this SSH key pair for authentication and mutual trust, enabling a secure and automated collaboration between the two platforms.
 
-Generate an SSH Key Pair
+### Generate an SSH Key Pair
 
 * If you haven't already, generate an SSH key pair on your Jenkins server. You can use the ssh-keygen command for this purpose. Run the following command:
 
