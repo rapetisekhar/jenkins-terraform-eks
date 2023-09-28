@@ -187,13 +187,16 @@ Configure Jenkins Job
 
 In the Jenkins dashboard, create a new pipeline job:
 
-* Click "New Item" 
+* Click "New Item"
+* 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/a485ed22-4e2d-48a2-8058-9182a4834f05)
 
 * Enter a job name > Select "Pipeline" as the job type > Click "OK."
+* 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/e3178e00-733f-466a-82ca-689a76cdf140)
 
 * In the "Build Triggers" option check the box `GitHub hook trigger for GitScm polling`
+* 
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/31c0d333-a4cf-4aa2-b5ea-cfd4b3f5a3b9)
 
 
