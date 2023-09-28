@@ -152,7 +152,18 @@ Additionally, incorporating this SSH key pair into Jenkins enables secure authen
 
 * Click "OK" to save the credentials.
 
-# 
+# Step 8: Create an ECR on AWS and a new pipeline in Jenkins to run our jobs.
+
+To create an Amazon Elastic Container Registry (ECR) repository in AWS, you can use either the AWS Management Console or the AWS Command Line Interface (CLI). Below, I'll provide instructions for both methods:
+
+Method 1: Using the AWS Management Console
+*Log in to your AWS account if you haven't already.
+
+* From the AWS Management Console, go to the "Services" dropdown in the top left corner, and under the "Compute" section, select "ECR" (Elastic Container Registry).
+
+* In the ECR dashboard, click the "Create repository" button.
+
+* Enter a unique name for your repository in the "Repository name" field. Optionally, add a tag immutability policy if desired. Click "Create repository" to create the ECR repository.
 
 
 
