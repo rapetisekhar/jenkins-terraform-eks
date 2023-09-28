@@ -200,6 +200,7 @@ In the Jenkins dashboard, create a new pipeline job:
 * In the job configuration, go to the "Pipeline" section.
 
 * Choose for the 'Pipeline script from SCM' option since our Jenkinsfile resides within the repository. Provide the repository URL and select the previously created GitHub access credentials in the credentials option. Choose the appropriate branch (e.g., 'main' or 'master') depending on your repo and scm configuration. Specify the Jenkinsfile path; in my case, it's in the root directory, so I'll simply use the filename 'Jenkinsfile'.
+
 ![image](https://github.com/profebass99/jenkins-terraform-eks/assets/104143346/bbd685ea-669c-42bd-ac4f-d086e63f8969)
 
 
