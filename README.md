@@ -42,7 +42,7 @@ You will be prompted to enter:
 
 ## Step 3: Terraform Script
 
-We have a Terraform script in a repository that automates Jenkins server setup. You can access it [here](https://github.com/profebass99/terraform/tree/main/jenkins-server).
+We have a Terraform script in a repository that automates Jenkins server setup. You can access it [here](https://github.com/profebass99/jenkins-terraform-eks/tree/main/jenkins-server).
 
 ## Step 4: Customize
 
